@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bhangra By C2S2 </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="event2.css">
+    
+</head>
+<body>
+    <section id="banner">
+        <img src="https://www.chitkara.edu.in/wp-content/themes/chitkara/images/CU_logo-footer.png" alt="chitkara logo" class="logo">
+        <div class="banner-text">
+            <h1>Nat Samraat</h1>
+            <p>Nat Samraat successfully staged Dramas.</p>
+
+            <div class="banner-btn">
+                <a href="#"><span></span>Learn More</a> 
+                <a href="#"><span></span>Enroll Now</a> 
+            </div>
+        </div>
+       
+
+        
+    </section>
+      <div id="dream">
+        <h1>Our Dramas</h1>
+      </div>
+      <div class="card-group">
+        <div class="card">
+          <img src="mn.7.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Drama</h5>
+            <p class="card-text">An orientation ceremony for the inception of Enigmatic Persuares in Chitkara (EPIC) Club was organised by the Office of Student Affairs (OSA), Chitkara University,</p>
+            <p class="card-text"><small class="text-body-secondary">🎭🎩</small></p>
+          </div>
+        </div>
+        <div class="card">
+            <img src="kj.2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Drama</h5>
+            <p class="card-text">A cultural night was organised by EPIC club and C2S2 for orienting the students that included various hypnotic performances and amusing activities.</p>
+            <p class="card-text"><small class="text-body-secondary">🎭🎩</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="mk.4.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Drama</h5>
+            <p class="card-text"> Natsamrat Theatre Club, a dance performance by Custody, a melodic performance of “Dhwani”, and an act of universe display by the C2S2 Panache club. </p>
+            <p class="card-text"><small class="text-body-secondary">🎭🎩</small></p>
+          </div>
+        </div>
+      </div>
+      <section class="stats" aria-label="our stats">
+        <div class="containers">
+  
+          <ul class="stats-card has-bg-image" style="background-image: url('./assets/images/stats-bg.jpg')">
+  
+            <li>
+              <p class="card-text">
+                <span class="h1">500+</span>
+  
+                <spna class="span">No of Events</spna>
+              </p>
+            </li>
+  
+            <li>
+              <p class="card-text">
+                <span class="h1">300+</span>
+  
+                <spna class="span">No of Winners</spna>
+              </p>
+            </li>
+  
+            <li>
+              <p class="card-text">
+                <span class="h1">900+</span>
+  
+                <spna class="span">Participants</spna>
+              </p>
+            </li>
+  
+            <li>
+              <p class="card-text">
+                <span class="h1">250</span>
+  
+                <spna class="span">Participants Left</spna>
+              </p>
+            </li>
+  
+          </ul>
+        </section>
+          
+
+  
+        
+        <main>
+          <h5 class="cardsw">HURRY UP! Registration Ends In..</h5>
+
+
+          <!-- <p> hurry up! Registration end in-</p> -->
+          <div class="container" style="
+          height: 30vh;
+          align-items: center;
+          font-size: 5rem;">
+        <div class="container-segment">
+          <div class="segment-title">Hours</div>
+          <div class="segment">
+            <div class="flip-card" data-hours-tens>
+              <div class="top">2</div>
+              <div class="bottom">2</div>
+            </div>
+            <div class="flip-card" data-hours-ones>
+              <div class="top">4</div>
+              <div class="bottom">4</div>
+            </div>
+          </div>
+        </div>
+        <div class="container-segment">
+          <div class="segment-title">Minutes</div>
+          <div class="segment">
+            <div class="flip-card" data-minutes-tens>
+              <div class="top">0</div>
+              <div class="bottom">0</div>
+            </div>
+            <div class="flip-card" data-minutes-ones>
+              <div class="top">0</div>
+              <div class="bottom">0</div>
+            </div>
+          </div>
+        </div>
+        <div class="container-segment">
+          <div class="segment-title">Seconds</div>
+          <div class="segment">
+            <div class="flip-card" data-seconds-tens>
+              <div class="top">0</div>
+              <div class="bottom">0</div>
+            </div>
+            <div class="flip-card" data-seconds-ones>
+              <div class="top">0</div>
+              <div class="bottom">0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+      </main>
+      
+      <script>
+          const countToDate = new Date().setHours(new Date().getHours() + 24);
+          let previousTimeBetweenDates;
+          setInterval(() => {
+              const currentDate = new Date();
+              const timeBetweenDates = Math.ceil((countToDate - currentDate) / 1000);
+              flipAllCards(timeBetweenDates);
+      
+              previousTimeBetweenDates = timeBetweenDates;
+          }, 250);
+      
+          function flipAllCards(time) {
+              const seconds = time % 60;
+              const minutes = Math.floor(time / 60) % 60;
+              const hours = Math.floor(time / 3600);
+      
+              flip(document.querySelector("[data-hours-tens]"), Math.floor(hours / 10));
+              flip(document.querySelector("[data-hours-ones]"), hours % 10);
+              flip(document.querySelector("[data-minutes-tens]"), Math.floor(minutes / 10));
+              flip(document.querySelector("[data-minutes-ones]"), minutes % 10);
+              flip(document.querySelector("[data-seconds-tens]"), Math.floor(seconds / 10));
+              flip(document.querySelector("[data-seconds-ones]"), seconds % 10);
+          }
+      
+          function flip(flipCard, newNumber) {
+              const topHalf = flipCard.querySelector(".top");
+              const startNumber = parseInt(topHalf.textContent);
+              if (newNumber === startNumber) return;
+      
+              const bottomHalf = flipCard.querySelector(".bottom");
+              const topFlip = document.createElement("div");
+              topFlip.classList.add("top-flip");
+              const bottomFlip = document.createElement("div");
+              bottomFlip.classList.add("bottom-flip");
+      
+              topHalf.textContent = startNumber;
+              bottomHalf.textContent = startNumber;
+              topFlip.textContent = startNumber;
+              bottomFlip.textContent = newNumber;
+      
+              topFlip.addEventListener("animationstart", () => {
+                  topHalf.textContent = newNumber;
+              });
+              topFlip.addEventListener("animationend", () => {
+                  topFlip.remove();
+              });
+              bottomFlip.addEventListener("animationend", () => {
+                  bottomHalf.textContent = newNumber;
+                  bottomFlip.remove();
+              });
+              flipCard.append(topFlip, bottomFlip);
+          }
+      </script>
+      
+
+  
+  
+    
+    </body>
+    </html>
